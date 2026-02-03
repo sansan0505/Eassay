@@ -13,6 +13,7 @@ The application is designed as a practical writing assistant that focuses on cla
 Eassay is publicly deployed and accessible here:  
 👉 **[Eassay – Live App](https://cx2fmkne7rbwko7p2rxrps.streamlit.app/)**
 
+It is **recommended to use the `gemini-flash-latest` model**, which is optimized for fast and cost-efficient text generation.
 ---
 
 ## ✨ Features
@@ -29,8 +30,6 @@ Eassay is publicly deployed and accessible here:
 - Real-time interaction powered by Streamlit  
 - Secure API key handling using Streamlit Secrets or manual input  
 
----
-It is **recommended to use the `gemini-flash-latest` model**, which is optimized for fast and cost-efficient text generation.
 ---
 
 ## 🛠 Technology Stack
