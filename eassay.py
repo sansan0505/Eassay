@@ -73,10 +73,15 @@ with st.sidebar:
     st.header("Configuration")
     
     # Try to get API key from secrets, otherwise show input
-    if "GEMINI_API_KEY" in st.secrets:
-        api_key = st.secrets["GEMINI_API_KEY"]
-        st.success("API Key loaded from secrets! 🔒")
-    else:
+    # Try to get API key from secrets, otherwise show input
+    try:
+        if "GEMINI_API_KEY" in st.secrets:
+            api_key = st.secrets["GEMINI_API_KEY"]
+            st.success("API Key loaded from secrets! 🔒")
+        else:
+            api_key = st.text_input("Gemini API Key", type="password", help="Get your key from Google AI Studio")
+    except FileNotFoundError:
+        # st.secrets raises FileNotFoundError (or StreamlitSecretNotFoundError) if no secrets file exists
         api_key = st.text_input("Gemini API Key", type="password", help="Get your key from Google AI Studio")
     
     model_name = st.selectbox(
