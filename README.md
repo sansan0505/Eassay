@@ -30,7 +30,8 @@ Eassay is publicly deployed and accessible here:
 - Secure API key handling using Streamlit Secrets or manual input  
 
 ---
-
+It is **recommended to use the `gemini-flash-latest` model**, which is optimized for fast and cost-efficient text generation.
+---
 ## 🛠 Technology Stack
 
 - **Python** – core application logic  
