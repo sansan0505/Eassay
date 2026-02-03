@@ -112,7 +112,7 @@ with st.sidebar:
 # Main Content Area
 st.markdown('<h3 style="margin-bottom: 20px;">Create content that matters</h3>', unsafe_allow_html=True)
 
-st.markdown('<p style="font-size: 24px; font-weight: 600; margin-bottom: -10px;">What would you like to write about?</p>', unsafe_allow_html=True)
+st.markdown('<p style="font-size: 24px; font-weight: 600; margin-bottom: 10px;">What would you like to write about?</p>', unsafe_allow_html=True)
 topic = st.text_area(
     "What would you like to write about?",
     label_visibility="collapsed",
