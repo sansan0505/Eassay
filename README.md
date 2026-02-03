@@ -32,6 +32,7 @@ Eassay is publicly deployed and accessible here:
 ---
 It is **recommended to use the `gemini-flash-latest` model**, which is optimized for fast and cost-efficient text generation.
 ---
+
 ## 🛠 Technology Stack
 
 - **Python** – core application logic  
