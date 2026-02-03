@@ -71,7 +71,14 @@ st.markdown('<h1>Eassay 💜</h1>', unsafe_allow_html=True)
 
 with st.sidebar:
     st.header("Configuration")
-    api_key = st.text_input("Gemini API Key", type="password", help="Get your key from Google AI Studio")
+    
+    # Try to get API key from secrets, otherwise show input
+    if "GEMINI_API_KEY" in st.secrets:
+        api_key = st.secrets["GEMINI_API_KEY"]
+        st.success("API Key loaded from secrets! 🔒")
+    else:
+        api_key = st.text_input("Gemini API Key", type="password", help="Get your key from Google AI Studio")
+    
     model_name = st.selectbox(
         "Select Model",
         [
